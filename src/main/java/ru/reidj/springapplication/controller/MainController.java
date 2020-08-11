@@ -15,5 +15,4 @@ public class MainController {
     public String login() {
         return "login";
     }
-
 }

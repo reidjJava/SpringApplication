@@ -16,6 +16,7 @@ public class User implements UserDetails {
     private String password;
     private boolean active;
     private String email;
+    private String activationCode;
     private String vacancy;
     private String location;
 
@@ -26,12 +27,13 @@ public class User implements UserDetails {
     public User() {
     }
 
-    public User(Long id, String username, String password, boolean active, String email, String vacancy, String location) {
+    public User(Long id, String username, String password, boolean active, String email, String activationCode, String vacancy, String location) {
         this.id = id;
         this.username = username;
         this.password = password;
         this.active = active;
         this.email = email;
+        this.activationCode = activationCode;
         this.vacancy = vacancy;
         this.location = location;
     }
@@ -111,5 +113,13 @@ public class User implements UserDetails {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getActivationCode() {
+        return activationCode;
+    }
+
+    public void setActivationCode(String activationCode) {
+        this.activationCode = activationCode;
     }
 }
